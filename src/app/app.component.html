@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="row">
+      <div class="col-mod-8">
+          
+          <h3>Account List</h3> 
+<div class="d-flex justify-content-center"> 
+<div class="spinner-border" role="status" > 
+	<span class="sr-only" id="loading">Loading...</span> 
+</div> 
+</div> 
+<div class="container">
+<div class="row">
+<table class="table table-striped" id='tab'> 
+	<thead> 
+	<tr> 
+		<th scope="col">Account Number</th> 
+		<th scope="col">Account Type</th> 
+		<th scope="col">Balance</th> 
+		<th scope="col"></th> 
+	</tr> 
+	</thead> 
+	<tbody> 
+	<tr *ngFor="let e of lis;"> 
+		<td>{{ e.account_number }}</td> 
+		<td>{{ e.account_type }}</td> 
+		<td>{{ "ZAR " + e.balance }}</td> 
+    <td></td>
+		<td><button type="button" class="btn btn-success">Withdraw</button></td> 
+	</tr> 
+  <label></label>
+	</tbody> 
+</table>
+</div>
+</div>
+      </div>
+  </div>
+</div>
